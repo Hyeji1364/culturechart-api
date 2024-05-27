@@ -1,0 +1,38 @@
+.header__logo {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 40px;
+    font-family: var(--fontX);
+}
+
+.header__menu {
+    .menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 20px;
+        gap: 40px;
+        font-size: 20px;
+
+        li {
+            a {}
+
+            ul {
+                display: flex;
+
+                li {
+                    a {}
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width:960px) {
+    .header__logo {
+        position: fixed;
+        left: 0;
+        top: 0;
+    }
+}
