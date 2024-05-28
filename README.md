@@ -1,4 +1,4 @@
-# Youtube API를 이용한 __ 사이트
+# Youtube API를 이용한 사이트
 - 사유
 
 ## 작업 순서
