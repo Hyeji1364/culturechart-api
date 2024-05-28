@@ -47,32 +47,28 @@ const Chart = () => {
 
     return (
         <div className='melon__chart'>
-            <h1>Melon 콘텐츠 순위</h1>
-            <div className="chart__controls">
-                <div className="control-group">
-                    <label>
-                        Chart Sub Name:
-                        <select value={chartSubName} onChange={handleSubNameChange}>
-                            <option value="melonconcert">멜론 콘서트</option>
-                            <option value="melonexhibiton">멜론 전시</option>
-                            <option value="melonmusical">멜론 뮤지컬</option>
-                        </select>
-                    </label>
-                </div>
-                <div className="control-group">
-                    <label>
-                        Date:
-                        <input type="date" value={selectedDate} onChange={handleDateChange} />
-                    </label>
-                </div>
+            <h1>멜론 콘서트 순위</h1>
+            <div>
+                {/* <label>
+                    Chart Sub Name:
+                    <select value={chartSubName} onChange={handleSubNameChange}>
+                        <option value="melonconcert">멜론 콘서트</option>
+                        <option value="melonexhibiton">멜론 전시</option>
+                        <option value="melonmusical">멜론 뮤지컬</option>
+                    </select>
+                </label> */}
+                <label>
+                    Date:
+                    <input type="date" value={selectedDate} onChange={handleDateChange} />
+                </label>
             </div>
             {chartData ? (
                 <div className='chart__grid'>
                     {chartData.map((item) => (
-                        <div key={item.Rank} className='chart__item'>
-                            <h2>{item.Rank}. {item.Title}</h2>
+                        <div key={item.rank} className='chart__item'>
+                            <h2>{item.rank}. {item.title}</h2>
                             <p>장소: {item.Venue}</p>
-                            <img src={item.ImageURL} alt={item.Title} className='chart__image' />
+                            <img src={item.ImageURL} alt={item.title} className='chart__image' />
                         </div>
                     ))}
                 </div>

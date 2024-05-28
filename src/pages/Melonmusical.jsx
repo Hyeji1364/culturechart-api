@@ -3,7 +3,7 @@ import '../assets/scss/style.scss';
 
 const Chart = () => {
     const [chartData, setChartData] = useState(null);
-    const [chartSubName, setChartSubName] = useState('melonemusical');
+    const [chartSubName, setChartSubName] = useState('melonmusical');
     const [chartName, setChartName] = useState('pychart_M_musical10');
     const [selectedDate, setSelectedDate] = useState('2024-05-03');
 
@@ -47,16 +47,16 @@ const Chart = () => {
 
     return (
         <div className='melon__chart'>
-            <h1>Melon 콘텐츠 순위</h1>
+            <h1>멜론 뮤지컬 순위</h1>
             <div>
-                <label>
+                {/* <label>
                     Chart Sub Name:
                     <select value={chartSubName} onChange={handleSubNameChange}>
                         <option value="melonconcert">멜론 콘서트</option>
                         <option value="melonexhibiton">멜론 전시</option>
                         <option value="melonmusical">멜론 뮤지컬</option>
                     </select>
-                </label>
+                </label> */}
                 <label>
                     Date:
                     <input type="date" value={selectedDate} onChange={handleDateChange} />
@@ -65,10 +65,10 @@ const Chart = () => {
             {chartData ? (
                 <div className='chart__grid'>
                     {chartData.map((item) => (
-                        <div key={item.Rank} className='chart__item'>
-                            <h2>{item.Rank}. {item.Title}</h2>
+                        <div key={item.rank} className='chart__item'>
+                            <h2>{item.rank}. {item.title}</h2>
                             <p>장소: {item.Venue}</p>
-                            <img src={item.ImageURL} alt={item.Title} className='chart__image' />
+                            <img src={item.ImageURL} alt={item.title} className='chart__image' />
                         </div>
                     ))}
                 </div>
