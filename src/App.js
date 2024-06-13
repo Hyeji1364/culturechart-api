@@ -128,11 +128,13 @@ const App = () => {
         </div>
 
         {loading ? (
-          <div class='graph'>
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
+          <div className="center-container">
+            <div className="graph">
+              <div className="bar"></div>
+              <div className="bar"></div>
+              <div className="bar"></div>
+              <div className="bar"></div>
+            </div>
           </div>
         ) : error ? (
           <p>{error}</p>
