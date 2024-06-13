@@ -271,6 +271,18 @@
     color: #698cdd;
 }
 
+.modal_left .modal_right .modal__change.up {
+    color: red;
+}
+
+.modal_left .modal_right .modal__change.no-change {
+    color: gray;
+}
+
+.modal_left .modal_right .modal__change.new {
+    color: yellow;
+}
+
 .modal_left .modal_right .modal__venue {
     margin: 10px 0;
     text-align: center;
