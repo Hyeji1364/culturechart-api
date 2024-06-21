@@ -24,9 +24,10 @@
 마우스 커서를 포스터 이미지에 올리면 3D효과처럼 돌아가며 순위, 제목, 진행 기간, 장소 정보를 보여줌
 
 
+![image](https://github.com/Hyeji1364/culturechart-api/assets/161557112/68d6f3a6-032a-4013-ba34-458ca9fc56f9)
 Select옵션을 통해 각 사이트별 콘서트, 전시, 뮤지컬을 선택할 수 있고 오른쪽 Calendar에서 일자를 선택하면 해당 일자의 데이터가 불러와지도록 구현
 
-
+![image](https://github.com/Hyeji1364/culturechart-api/assets/161557112/461adc82-7c34-4f34-bfe1-8096085d03d4)
 포스터 이미지를 누르면 팝업 형태가 뜨면서 순위의 변동 유무까지 포함된 정보창이 나오고, 예매하기 링크를 통해 사이트로 이동되도록 설정
 
 # 🛠️ 트러블 슈팅
