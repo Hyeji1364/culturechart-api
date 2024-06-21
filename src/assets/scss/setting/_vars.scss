@@ -1,6 +1,7 @@
 :root {
     --fontN: "nanumSquareNeo";
     --fontX: "nexonLv1";
+    --fontY: "양진체";
 
     --black: #000;
     --black100: #111;
@@ -17,7 +18,7 @@
     --white500: #fff;
 
     // 폰트 셋팅
-    font-family: var(--fontN), var(--fontX);
+    font-family: var(--fontY), var(--fontN), var(--fontX);
     font-size: 16px;
     line-height: 1.5;
     font-weight: 400;
