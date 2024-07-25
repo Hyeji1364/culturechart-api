@@ -1,489 +1,495 @@
 @font-face {
-    font-family: 'GmarketSansMedium';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "GmarketSansMedium";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 * {
-    font-family: 'GmarketSansMedium';
-    font-weight: 700;
+  font-family: "GmarketSansMedium";
+  font-weight: 700;
 }
 
 #root {
-    background-color: #fff;
-    width: 100%;
+  background-color: #fff;
+  width: 100%;
 }
 
 .wrapper {
-    max-width: 1280px;
-    margin: 0 auto;
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
 .stage {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 0;
-    list-style: none;
-    margin-bottom: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 0;
+  list-style: none;
+  margin-bottom: 3rem;
 }
 
 .scene {
-    width: 240px;
-    height: 400px;
-    margin: 20px;
-    perspective: 1000px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 240px;
+  height: 400px;
+  margin: 20px;
+  perspective: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .card {
-    width: 260px;
-    height: 400px;
-    transform-style: preserve-3d;
-    transform: translateZ(-130px);
-    transition: transform 350ms;
+  width: 260px;
+  height: 400px;
+  transform-style: preserve-3d;
+  transform: translateZ(-130px);
+  transition: transform 350ms;
 }
 
 .card:hover {
-    transform: rotateY(-78deg) translateZ(20px);
+  transform: rotateY(-78deg) translateZ(20px);
 }
 
 .card .poster,
 .card .info {
-    position: absolute;
-    width: 260px;
-    height: 400px;
-    backface-visibility: hidden;
-    background-color: #fff;
+  position: absolute;
+  width: 260px;
+  height: 400px;
+  backface-visibility: hidden;
+  background-color: #fff;
 }
 
 .card .poster {
-    transform: translateZ(130px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: none;
-    overflow: hidden;
+  transform: translateZ(130px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  overflow: hidden;
 }
 
 .card .poster img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .card .info {
-    transform: rotateY(90deg) translateZ(130px);
-    border: 1px solid #b8b5b5;
-    font-size: 1rem;
-    overflow: hidden;
+  transform: rotateY(90deg) translateZ(130px);
+  border: 1px solid #b8b5b5;
+  font-size: 1rem;
+  overflow: hidden;
 }
 
 .card::after {
-    content: '';
-    width: 260px;
-    height: 260px;
-    position: absolute;
-    bottom: 0;
-    box-shadow: 0 30px 50px rgba(0, 0, 0, 0.3);
-    transform-origin: 100% 100%;
-    transform: rotateX(90deg) translateY(130px);
-    transition: box-shadow 350ms;
+  content: "";
+  width: 260px;
+  height: 260px;
+  position: absolute;
+  bottom: 0;
+  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.3);
+  transform-origin: 100% 100%;
+  transform: rotateX(90deg) translateY(130px);
+  transition: box-shadow 350ms;
 }
 
 .card:hover::after {
-    box-shadow: 20px -5px 50px rgba(0, 0, 0, 0.3);
+  box-shadow: 20px -5px 50px rgba(0, 0, 0, 0.3);
 }
 
 .card .info header {
-    color: #000;
-    padding: 7px 10px;
-    height: 195px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    text-shadow: 0px 1px 1px rgba(0, 0, 0, 1);
+  color: #000;
+  padding: 7px 10px;
+  height: 195px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 1);
 }
 
 .card .info header h1 {
-    margin: 0 0 2px;
-    font-size: 2em;
-    color: #fff;
-    background-color: #0d3286;
-    padding: 0.5rem;
-    border-radius: 0.5rem;
-    margin-bottom: 1.2rem;
-    padding-left: 20px;
+  margin: 0 0 2px;
+  font-size: 2em;
+  color: #fff;
+  background-color: #0d3286;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1.2rem;
+  padding-left: 20px;
 }
 
 .card .info header .value {
-    border: 1px solid #FFF;
-    padding: 0px 3px;
+  border: 1px solid #fff;
+  padding: 0px 3px;
 }
 
 .card .info p {
-    padding: 1.2em 1.4em;
-    margin: 2px 0 0;
-    font-weight: 700;
-    color: #000;
-    line-height: 1.4em;
-    border-top: 5px solid #0d3286;
-    word-wrap: break-word;
-    word-break: break-word;
+  padding: 1.2em 1.4em;
+  margin: 2px 0 0;
+  font-weight: 700;
+  color: #000;
+  line-height: 1.4em;
+  border-top: 5px solid #0d3286;
+  word-wrap: break-word;
+  word-break: break-word;
 }
 
 .card .poster,
 .card .info,
 .card .info header {
-    transition: box-shadow 350ms;
+  transition: box-shadow 350ms;
 }
 
 .card .poster {
-    background-position: center;
-    background-repeat: no-repeat;
-    box-shadow: inset 0px 0px 40px rgba(255, 255, 255, 0);
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: inset 0px 0px 40px rgba(255, 255, 255, 0);
 }
 
 .card:hover .poster {
-    box-shadow: inset 300px 0px 40px rgba(255, 255, 255, 0.8);
+  box-shadow: inset 300px 0px 40px rgba(255, 255, 255, 0.8);
 }
 
 .card .info,
 .card .info header {
-    box-shadow: inset -300px 0px 40px rgba(0, 0, 0, 0.5);
+  box-shadow: inset -300px 0px 40px rgba(0, 0, 0, 0.5);
 }
 
 .card:hover .info,
 .card:hover .info header {
-    box-shadow: inset 0px 0px 40px rgba(0, 0, 0, 0);
+  box-shadow: inset 0px 0px 40px rgba(0, 0, 0, 0);
 }
 
 .modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.93);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
-    animation: fadeIn 0.3s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.93);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s;
 }
 
 .modal_container {
-    background: #fff;
-    border-radius: 8px;
-    display: flex;
-    width: 800px;  /* 고정된 너비 */
-    height: 600px;  /* 고정된 높이 */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border: 1px solid #ddd;
-    overflow: hidden;
+  background: #fff;
+  border-radius: 8px;
+  display: flex;
+  width: 800px; /* 고정된 너비 */
+  height: 600px; /* 고정된 높이 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+  overflow: hidden;
 }
 
 .modal_left {
-    width: 50%;
-    position: relative;
-    background: #2D60ED;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-top-left-radius: 8px;
-    border-bottom-left-radius: 8px;
+  width: 50%;
+  position: relative;
+  background: #2d60ed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
 }
 
 .modal_left img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;  /* 이미지 비율 유지 */
-    border-radius: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* 이미지 비율 유지 */
+  border-radius: 0;
 }
 
 .modal_right {
-    width: 50%;
-    padding: 2rem;
-    background-color: #fff;
-    color: #000;
-    text-align: left;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border-left: 0.18em dashed #fff;
-    border-top-right-radius: 8px;
-    border-bottom-right-radius: 8px;
+  width: 50%;
+  padding: 2rem;
+  background-color: #fff;
+  color: #000;
+  text-align: left;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-left: 0.18em dashed #fff;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
 
 .modal_right::before,
 .modal_right::after {
-    content: '';
-    position: absolute;
-    width: 0.9em;
-    height: 0.9em;
-    background: #fff;
-    border-radius: 50%;
-    left: -0.5em;
+  content: "";
+  position: absolute;
+  width: 0.9em;
+  height: 0.9em;
+  background: #fff;
+  border-radius: 50%;
+  left: -0.5em;
 }
 
 .modal_right::before {
-    top: -0.4em;
+  top: -0.4em;
 }
 
 .modal_right::after {
-    bottom: -0.4em;
+  bottom: -0.4em;
 }
 
 .closeButton {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    z-index: 1001;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
 
-    svg {
-        width: 2em;
-        height: 2em;
-        color: black;
-    }
+  svg {
+    width: 2em;
+    height: 2em;
+    color: black;
+  }
 }
 
 .linkButton {
-    background-color: #0d3286;
-    color: #fff;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-top: 1rem;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
-    border: none;
+  background-color: #0d3286;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 1rem;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  border: none;
 
-    &:hover {
-        background-color: #0056b3;
-    }
+  &:hover {
+    background-color: #0056b3;
+  }
 }
 
 .modal_content {
-    opacity: 1;
-    transition: opacity 0.5s ease-in-out;
-    padding: 1rem;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border: 1px solid #ddd;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
 }
 
 .modal__rank {
-    font-size: 2rem;
-    color: #2D60ED;
-    text-align: center;
-    margin-bottom: 1rem;
+  font-size: 2rem;
+  color: #2d60ed;
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
 .modal__title,
 .modal__date,
 .modal__venue {
-    text-align: left;
-    display: flex;
-    align-items: center;
-    margin: 0.5rem 0;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  margin: 0.5rem 0;
 }
 
 .modal__change {
-    display: flex;
-    align-items: center;
-    margin: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  margin: 0.5rem 0;
 }
 
 .modal__change.up {
-    color: red;
+  color: red;
 }
 
 .modal__change.down {
-    color: blue;
+  color: blue;
 }
 
 .modal__change.no-change {
-    color: gray;
+  color: gray;
 }
 
 .modal__change.new {
-    color: yellow;
+  color: yellow;
 }
 
 .modal__venue {
-    margin: 10px 0;
-    text-align: left;
+  margin: 10px 0;
+  text-align: left;
 }
 
 @media (max-width: 1200px) {
-    .scene {
-        width: 30%;
-    }
+  .scene {
+    width: 30%;
+  }
 
-    .card__effect {
-        width: 400px;
-        height: 600px;
-    }
+  .card__effect {
+    width: 400px;
+    height: 600px;
+  }
 
-    .linkButton {
-        width: 400px;
-        font-size: 1rem;
-        padding: 0.5rem 1rem;
-    }
+  .linkButton {
+    width: 400px;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
 
-    .modal_right {
-        width: 500px;
-        padding: 1rem;
-    }
+  .modal_right {
+    width: 500px;
+    padding: 1rem;
+  }
 
-    .modal_content {
-        font-size: 0.875rem;
-    }
+  .modal_content {
+    font-size: 0.875rem;
+  }
 }
 
 @media (max-width: 960px) {
-    .scene {
-        width: 30%;
-    }
+  .scene {
+    width: 30%;
+  }
 
-    .card__effect {
-        width: 320px;
-        height: 470px;
-    }
+  .card__effect {
+    width: 320px;
+    height: 470px;
+  }
 
-    .linkButton {
-        width: 350px;
-        font-size: 0.875rem;
-        padding: 0.5rem 1rem;
-    }
+  .linkButton {
+    width: 350px;
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
+  }
 
-    .modal_right {
-        width: 400px;
-        padding: 1rem;
-    }
+  .modal_right {
+    width: 400px;
+    padding: 1rem;
+  }
 
-    .modal_content {
-        font-size: 0.875rem;
-    }
+  .modal_content {
+    font-size: 0.875rem;
+  }
 }
 
 @media (max-width: 768px) {
-    .scene {
-        width: 45%;
-    }
+  .scene {
+    width: 45%;
+  }
 
-    .card__effect {
-        width: 300px;
-        height: 450px;
-    }
+  .card__effect {
+    width: 300px;
+    height: 450px;
+  }
 
-    .linkButton {
-        width: 300px;
-        font-size: 0.75rem;
-        padding: 0.5rem 1rem;
-    }
+  .linkButton {
+    width: 300px;
+    font-size: 0.75rem;
+    padding: 0.5rem 1rem;
+  }
 
-    .modal_right {
-        width: 300px;
-        padding: 0.5rem;
-    }
+  .modal_right {
+    width: 300px;
+    padding: 0.5rem;
+  }
 
-    .modal_content {
-        font-size: 0.75rem;
-    }
+  .modal_content {
+    font-size: 0.75rem;
+  }
 }
 
 @media (max-width: 480px) {
-    .scene {
-        width: 90%;
-    }
+  .scene {
+    width: 90%;
+  }
 
-    .card__effect {
-        width: 240px;
-        height: 360px;
-    }
+  .card__effect {
+    width: 240px;
+    height: 360px;
+  }
 
-    .linkButton {
-        width: 240px;
-        font-size: 0.75rem;
-        padding: 0.5rem 1rem;
-    }
+  .linkButton {
+    width: 240px;
+    font-size: 0.75rem;
+    padding: 0.5rem 1rem;
+  }
 
-    .modal_right {
-        width: 260px;
-        padding: 0.5rem;
-    }
+  .modal_right {
+    width: 260px;
+    padding: 0.5rem;
+  }
 
-    .modal_content {
-        font-size: 0.75rem;
-    }
+  .modal_content {
+    font-size: 0.75rem;
+  }
 }
 
 /* Card Effect */
 @property --rotate {
-    syntax: "<angle>";
-    initial-value: 132deg;
-    inherits: false;
+  syntax: "<angle>";
+  initial-value: 132deg;
+  inherits: false;
 }
-  
+
 body {
-    min-height: 100vh;
-    background: #fff;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    padding-bottom: 2rem;
-    box-sizing: border-box;
+  min-height: 100vh;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
 }
-  
+
 .card__effect::before {
-    content: "";
-    width: 104%;
-    height: 102%;
-    border-radius: 8px;
-    background-image: linear-gradient(
-      var(--rotate)
-      , #5ddcff, #3c67e3 43%, #4e00c2);
-    position: absolute;
-    z-index: -1;
-    top: -1%;
-    left: -2%;
-    animation: spin 2.5s linear infinite;
+  content: "";
+  width: 104%;
+  height: 102%;
+  border-radius: 8px;
+  background-image: linear-gradient(
+    var(--rotate),
+    #5ddcff,
+    #3c67e3 43%,
+    #4e00c2
+  );
+  position: absolute;
+  z-index: -1;
+  top: -1%;
+  left: -2%;
+  animation: spin 2.5s linear infinite;
 }
-  
+
 .card__effect::after {
-    position: absolute;
-    content: "";
-    top: calc(var(--card-height) / 6);
-    left: 0;
-    right: 0;
-    z-index: -1;
-    height: 100%;
-    width: 100%;
-    margin: 0 auto;
-    transform: scale(0.8);
-    filter: blur(calc(var(--card-height) / 6));
-    background-image: linear-gradient(
-      var(--rotate)
-      , #5ddcff, #3c67e3 43%, #4e00c2);
-    opacity: 1;
-    transition: opacity .5s;
-    animation: spin 2.5s linear infinite;
+  position: absolute;
+  content: "";
+  top: calc(var(--card-height) / 6);
+  left: 0;
+  right: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  transform: scale(0.8);
+  filter: blur(calc(var(--card-height) / 6));
+  background-image: linear-gradient(
+    var(--rotate),
+    #5ddcff,
+    #3c67e3 43%,
+    #4e00c2
+  );
+  opacity: 1;
+  transition: opacity 0.5s;
+  animation: spin 2.5s linear infinite;
 }
-  
+
 @keyframes spin {
-    0% {
-        --rotate: 0deg;
-    }
-    100% {
-        --rotate: 360deg;
-    }
+  0% {
+    --rotate: 0deg;
+  }
+  100% {
+    --rotate: 360deg;
+  }
 }
